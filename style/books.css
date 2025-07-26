@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 50%, #f9fafb 100%);
+    color: #333;
+}
+
+.page-title {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.page-title h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.book-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.book-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    font-size: 1em;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.type{
+    margin-bottom: 10px;
+}
+
+.level{
+    margin-bottom: 20px;
+}
+
+.book-info button {
+    background-color: #ffc400;
+    color: #000;
+    margin-top: 30px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-info button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.admin_add_books{
+    display: none;
+    text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title h1 {
+        font-size: 2em;
+    }
+
+    .books-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,743 @@
+/* Reset / base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 50%, #f9fafb 100%);
+    line-height: 1.6;
+}
+
+/* Fade-in on page load */
+body {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* -------------------
+    Navigationbar
+------------------- */
+.navbar, .mid-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.mid-nav a{
+    text-decoration: none;
+}
+.navbar{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.img-head {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    transition: background 0.3s, border-radius 0.3s;
+}
+
+.img-head img {
+    width: 30px;
+}
+
+.img-head p {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+}
+
+/* underline on hover */
+.img-head p::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #000000;
+    transition: width 0.3s;
+}
+
+.img-head p:hover::after {
+    width: 100%;
+}
+
+.img-head:hover {
+    background-color: #ffc400;
+    border-radius: 20px;
+}
+
+/* -------------------
+Login & New buttons
+------------------- */
+#login_btn, #new_btn, #logout_btn {
+    border-radius: 15px;
+    font-size: large;
+    padding: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#logout_btn{
+    display: none;
+}
+
+#login_btn, #logout_btn {
+    background-color: #ffc400;
+    color: #000;
+}
+
+#login_btn:hover, #logout_btn:hover {
+    background-color: #000;
+    color: #f9fafb;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#new_btn {
+    background-color: #000;
+    color: #f9fafb;
+}
+
+#new_btn:hover {
+    background-color: #ffc400;
+    color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ---------------------
+Brand logo section
+--------------------- */
+.brand_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand_logo h1 {
+    font-size: large;
+}
+
+.brand_logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* ---------------------
+Intro section
+--------------------- */
+.intro {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 100px 0;
+    align-items: center;
+}
+
+.intro img {
+    width: 50%;
+    height: 540px;
+    margin: 20px 0 30px 30px;
+    border-radius: 30px;
+    animation: slideFadeInRight 1s ease-out both;
+    animation-delay: 0.3s;
+    transition: transform 0.4s;
+}
+
+.intro img:hover {
+    transform: scale(1.5);
+}
+
+
+.intro_text {
+    animation: slideFadeInLeft 1s ease-out both;
+}
+
+.intro_text h1 {
+    font-size: 5em;
+    line-height: 1.2;
+}
+
+.intro_text p {
+    width: 90%;
+    font-size: medium;
+    margin-top: 20px;
+    text-align: justify;
+    color: #8f8d8d;
+}
+
+/* Keyframes */
+@keyframes slideFadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------------------
+Intro email input
+--------------------- */
+.email-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.email-div button {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    font-size: large;
+    padding: 15px;
+    background-color: #ffc400;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.email-div button:hover {
+    background-color: #000000;
+    color: #f9fafb;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Floating label input */
+.input-container {
+    position: relative;
+    width: 80%;
+}
+
+.input-container input {
+    font-size: large;
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: large;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Animate label up */
+.input-container input:focus + label,
+.input-container input:valid + label {
+    top: -15px;
+    left: 10px;
+    font-size: medium;
+    background: #f9fafb;
+    padding: 0 5px;
+    color: #333;
+}
+
+/*================
+About Section
+==================*/
+
+.about_section{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.about_section h1{
+    text-align: center;
+    font-size: 3em;
+}
+.img-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+}
+.img-text img{
+    width: 50%;
+    height: 400px;
+    margin: 50px;
+    border-radius: 20px;
+    box-shadow: 10px 8px 20px rgba(0,0,0,8);
+    transition: transform 0.4s;
+}
+.img-text img:hover{
+    transform: scale(1.02);
+}
+.img-text p{
+    margin-left: 10px;
+    margin-right: 50px;
+    text-align: justify;
+    font-size: large;
+}
+
+/*================
+User Reviews Section
+==================*/
+.reviews_section {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.reviews {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;           
+    justify-content: center; 
+    gap: 20px;
+}
+
+
+.review-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(350% - 20px);
+    padding: 20px;
+}
+
+
+.reviews_section h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.user-details h2{
+    font-size: large;
+    color: #555;
+}
+.reviews_section p {
+    font-size: medium;
+    color: #888;
+}
+
+.user-review{
+    text-align: justify;
+    padding: 5px;
+}
+
+.user-details {
+    align-items: center;
+    gap: 20px;
+}
+
+.user-date{
+    font-size: x-small;
+    color: #aaa;
+    text-align: right;
+}
+
+/*================
+Contact Section
+==================*/
+
+.contact_section{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.contact_section h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+.contact_section p{
+    text-align: center;
+    font-size: 2em;
+    color: #888;
+}
+
+.contact-div{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    padding: 50px 20px;
+
+}
+
+.contact-div img{
+    width: 50%;
+    height: 500px;
+    border-radius: 30px;
+
+}
+
+.user-inputs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user-inputs input{
+    padding: 15px;
+    font-size: large;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.user-inputs textarea{
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    height: 200px;
+    resize: vertical;
+}
+
+.user-inputs button {
+    margin-top: 30px;
+    border-radius: 15px;
+    font-size: large;
+    padding: 15px;
+    background-color: #ffc400;
+    color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.user-inputs button:hover {
+    background-color: #000000;
+    color: #f9fafb;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.name-inputs{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.name-inputs input{
+    padding: 15px;
+    font-size: large;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    align-items: center;
+}
+
+/*==============
+Social Section
+================*/
+
+.social_section {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px 0;
+  margin-bottom: 0px;
+  background-color: #000;
+}
+
+.social_section p{
+    text-align: center;
+    color: white;
+}
+
+.social_section h1 {
+  font-size: 2.5em;
+  color: white;
+}
+
+.contact-div {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+}
+
+.contact-div a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.contact-div a img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-div a:hover {
+  background: #ffc400;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =======================
+Intro section slide in
+======================= */
+
+
+
+/* --------------------
+Contact section scroll animation
+-------------------- */
+/* Faster animations */
+.animate-heading,
+.animate-subheading,
+.animate-image,
+.animate-input,
+.animate-button {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+/* Faster animate on view */
+.animate-heading.visible {
+    animation: fadeSlideLeft 0.5s forwards;
+}
+.animate-subheading.visible {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+.animate-image.visible {
+    animation: slideScaleInLeft 0.6s forwards;
+    animation-delay: 0.3s;
+}
+
+/* Inputs cascade faster */
+.animate-input.visible:nth-of-type(1) { animation: slideFadeUp 0.4s forwards; animation-delay: 0.4s; }
+.animate-input.visible:nth-of-type(2) { animation: slideFadeUp 0.4s forwards; animation-delay: 0.5s; }
+.animate-input.visible:nth-of-type(3) { animation: slideFadeUp 0.4s forwards; animation-delay: 0.6s; }
+.animate-input.visible:nth-of-type(4) { animation: slideFadeUp 0.4s forwards; animation-delay: 0.7s; }
+
+/* Button quick pop */
+.animate-button.visible {
+    animation: popUp 0.4s forwards;
+    animation-delay: 0.6s;
+}
+
+/* Keyframes unchanged */
+@keyframes fadeSlideLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideScaleInLeft {
+    from { opacity: 0; transform: translateX(-30px) scale(0.97); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes slideFadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes popUp {
+    from { opacity: 0; transform: scale(0.95) translateY(8px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+
+/* Responsive: Intro section stack on small screens */
+@media (max-width: 992px) {
+    .intro {
+        flex-direction: column;
+        margin: 30px;
+    }
+    .intro img {
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+    }
+    .intro_text h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    .intro_text p {
+        width: 100%;
+        text-align: justify;
+    }
+    .email-div {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .input-container {
+        width: 100%;
+    }
+}
+
+/* Responsive: About section stack */
+@media (max-width: 992px) {
+    .img-text {
+        flex-direction: column;
+    }
+    .img-text img {
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+    }
+    .img-text p {
+        margin: 20px;
+        text-align: justify;
+    }
+}
+
+/* Responsive: Contact section inputs */
+@media (max-width: 768px) {
+    .name-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .user-inputs input,
+    .user-inputs textarea {
+        width: 100%;
+    }
+}
+
+/* Responsive: Contact image stack */
+@media (max-width: 992px) {
+    .contact-div {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-div img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Responsive: Social icons spacing */
+@media (max-width: 600px) {
+    .contact-div a {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-div a img {
+        width: 24px;
+        height: 24px;
+    }
+    .social_section h1 {
+        font-size: 2em;
+    }
+}
+
+/* Better spacing on small devices */
+@media (max-width: 500px) {
+    .intro_text h1, .about_section h1, .contact_section h1, .social_section h1 {
+        font-size: 2em;
+    }
+    .intro_text p, .img-text p, .contact_section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 992px) {
+    .review-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+@media (max-width: 600px) {
+    .review-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.hamburger {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  #login_btn, #logout_btn{
+    margin-left: 30px;
+  }
+
+  .mid-nav,
+  .nav-buttons {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .mid-nav a,
+  .nav-buttons button {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar.expanded .mid-nav,
+  .navbar.expanded .nav-buttons {
+    display: flex;
+  }
+}

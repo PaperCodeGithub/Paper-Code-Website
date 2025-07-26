@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Code Portfolio</title>
+    <link rel="stylesheet" href="style/index_style.css">
+    <script type="module" src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand_logo">
+            <img src="assets/paper_code_logo.png"/>
+            <h1>Paper Code</h1>
+        </div>
+        <nav class="mid-nav" id="nav-links">
+            <a href="https://github.com/PaperCodeGithub">
+                <div class="img-head">
+                    <img src="assets/icons/project.svg"/>
+                    <p>Projects</p>
+                </div>
+            </a>
+            <a href="addon/tools.html">
+                <div class="img-head">
+                    <img src="assets/icons/tools.png"/>
+                    <p>Tools</p>
+                </div>
+            </a>
+
+            <a href="addon/exp.html">
+                <div class="img-head">
+                    <img src="assets/icons/experiment.svg"/>
+                    <p>Experiments</p>
+                </div>
+            </a>
+
+            <a href="addon/books.html">
+                <div class="img-head">
+                    <img src="assets/icons/book.svg"/>
+                    <p>Books</p>
+                </div>
+            </a>
+        </nav>
+        <div class="creat">
+            <button id="login_btn">Login</button>
+            <button id="new_btn">New</button>
+            <button id="logout_btn">Logout</button>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </header>
+
+    <section class="intro">
+        <div class="intro_text">
+            <h1>Welcome to<br>Paper Code</h1>
+            <p>Paper Code is more than just a name, it’s a vision.
+                At Paper Code, we push boundaries by crafting everything from cutting-edge AI and machine learning models to 
+                robust system-level programs. We dive deep into diverse topics, constantly experimenting and building things 
+                people often think are impossible. Whether it’s inventing entirely new algorithms or breathing fresh life into 
+                classic ones, Paper Code thrives on curiosity, creativity, and a relentless pursuit of innovation.<br>
+                This is a space where ideas evolve into tangible projects, where technology meets imagination, 
+                and where the future is written one line of code at a time.</p>
+            <div class="email-div">
+                <div class="input-container">
+                    <input type="text" id="review" required>
+                    <label for="review">Write your experience with us</label>
+                </div>
+                <button id="review_btn">Publish</button>
+            </div>
+        </div>
+        <img src="assets/paper_code_logo.png"/>
+    </section>
+
+    <section class="about_section">
+        <h1>About Me</h1>
+        <div class="img-text">
+            <img src="assets/my_pic.png"/>
+            <p>Hi, I’m <b>Aritra</b> — the mind and hands behind Paper Code. 
+                I’m a passionate software developer from India who finds joy in transforming raw ideas into clean, elegant, and 
+                functional code.<br>From crafting intuitive web applications to experimenting with creative AI and diving into 
+                system-level intricacies, I thrive on exploring the vast intersections of technology and imagination. 
+                I love building things that challenge conventional thinking whether it’s designing brand-new algorithms, 
+                reimagining old ones, or stitching together unlikely concepts to see what emerges.<br><br>
+                <b>Paper Code</b> is my personal laboratory where I document this journey — sharing my projects, experiments, 
+                and the small lessons I pick up along the way. It’s a space that captures not just what I build, but why I build it. 
+                Thanks for taking the time to visit. I hope something here sparks your curiosity as much as it fuels mine.</p>
+        </div>
+    </section>
+
+    <section class="reviews_section">
+        <h1 class="animate-heading">Reviews</h1>
+        <div class="reviews" id="reviews">
+            <div class="review-card">
+                <div class="user-details">
+                    <h2 class="user-name">John Doe</h2>
+                    <p class="user-review">Paper Code is a game-changer! The projects are innovative and the code is clean.</p>
+                    <p class="user-date">2023-10-01</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact_section">
+        <h1 class="animate-heading">Contact Me</h1>
+        <p class="animate-subheading">Ready to build something together?</p>
+        <div class="contact-div">
+            <img src="assets/contact_us.png" class="animate-image"/>
+            <div class="user-inputs">
+                <div class="name-inputs">
+                    <input placeholder="First Name" class="animate-input"/>
+                    <input placeholder="Last Name" class="animate-input"/>
+                </div>
+                <input placeholder="Email" class="animate-input"/>
+                <textarea placeholder="Your Message" class="animate-input"></textarea>
+                <button id="sendContact" class="animate-button">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="social_section">
+        <h1>My Socials</h1>
+        <div class="contact-div">
+            <a href="https://www.facebook.com/profile.php?id=61578736383053"><img src="assets/icons/facebook.svg"/></a>
+            <a href="https://www.instagram.com/paper.code.world/"><img src="assets/icons/instagram.svg"/></a>
+            <a href="https://github.com/PaperCodeGithub"><img src="assets/icons/github.svg"/></a>
+        </div>
+        <p>
+            Created with ❤️ by <strong>Paper Code</strong>
+        </p>
+    </section>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navbar").classList.toggle("expanded");
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Paper Code</title>
+    <link rel="stylesheet" href="../style/login.css">
+    <script type="module" src="../scripts/login.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="login-container">
+            <h1>Hey!</h1>
+            <h2>Sign in to your account</h2>
+            <input type="email" class="email_class" id="username" placeholder="Email" required><br>
+
+            <div class="input-wrapper">
+                <img src="../assets/icons/password_icon.png" class="input-icon-left" />
+                <input type="password" id="password" placeholder="Enter password" />
+                <img src="../assets/icons/show_password_icon_close.png" class="input-icon-right" id="togglePassword" />
+            </div>
+            <br>
+            
+            <button id="login_btn">Login</button><br>
+            
+            <p">Don't have an account? <a href="new.html">Register</a></p>
+        
+        </div>
+        <div class="welcome-container">
+            <h1>Welcome Back</h1>
+            <p>We are glad to see you again. Let's continue building amazing projects together!</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="customModal" class="modal">
+    <div class="modal-content">
+        <h2 class="heading">Notice</h2>
+        <p class="description">This is a custom alert box!</p>
+        <button id="modal_close_btn">OK</button>
+    </div>
+    </div>
+
+    
+</body>
+</html>

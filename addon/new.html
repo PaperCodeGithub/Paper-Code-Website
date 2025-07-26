@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Paper Code</title>
+  <link rel="stylesheet" href="../style/new.css" />
+  <script type="module" src="../scripts/new.js" defer></script>
+</head>
+<body>
+  <div class="register-container">
+    <h1>Create Account</h1>
+    <p class="subtitle">Join The Journey of Building Cool Projects</p>
+
+    <div class="input-group-double">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+    </div>
+
+    <input type="email" id="email" placeholder="Email" required />
+
+    <div class="input-wrapper">
+      <img src="../assets/icons/password_icon.png" class="input-icon-left" />
+      <input type="password" id="password" placeholder="Create Password" />
+      <img src="../assets/icons/show_password_icon_close.png" class="input-icon-right" id="togglePassword" />
+    </div>
+
+    <button id="register_btn">Register</button>
+
+    <p class="footer-link">Already have an account? <a href="login.html">Login</a></p>
+
+    <!-- Modal -->
+    <div id="customModal" class="modal">
+    <div class="modal-content">
+        <h2 class="heading">Notice</h2>
+        <p class="description">This is a custom alert box!</p>
+        <button id="modal_close_btn">OK</button>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
