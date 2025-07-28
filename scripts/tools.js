@@ -72,7 +72,7 @@ async function fetchTools() {
                 <p class="project-desc">${tool.description}</p>
                 <p class="project-desc"><strong>Platform:</strong> ${tool.platform}</p>
                 <div class="btn-group">
-                    <button class="download-btn" onclick="window.open('${tool.link_download}', '_blank')">Free Download</button>
+                    <button class="download-btn" onclick="window.open('${tool.link_download}', '_blank')">Download</button>
                     <button class="code-btn" onclick="window.open('${tool.link_source}', '_blank')">Source Code</button>
                 </div>
             `;

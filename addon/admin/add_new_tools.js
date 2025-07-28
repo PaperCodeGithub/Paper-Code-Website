@@ -22,7 +22,8 @@ async function submitExp(event) {
     const name = document.getElementById("name").value;
     const des = document.getElementById("des").value;
     const plat = document.getElementById("plat").value;
-    const link = document.getElementById("link").value;
+    const linkd = document.getElementById("linkd").value;
+    const links = document.getElementById("links").value;
     const file = document.getElementById("img").files[0];
 
     if (!file) {
@@ -36,7 +37,8 @@ async function submitExp(event) {
         name: name,
         description: des,
         platform: plat,
-        link: link,
+        link_download: linkd,
+        link_source: links,
         image: imageBase64,
         date: new Date()
     }).then(() => {
